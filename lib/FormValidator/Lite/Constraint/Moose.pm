@@ -20,15 +20,16 @@ __END__
 
 =head1 NAME
 
-FormValidator::Lite::Constraint::Moose -
+FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
 
 =head1 SYNOPSIS
 
-  use FormValidator::Lite::Constraint::Moose;
+  use FormValidator::Lite;
+  FormValidator::Lite->load_constraints(qw/Moose/);
 
 =head1 DESCRIPTION
 
-FormValidator::Lite::Constraint::Moose is
+This module is custom constraint module for FormValidator::Lite.
 
 =head1 AUTHOR
 
