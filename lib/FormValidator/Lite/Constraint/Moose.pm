@@ -27,15 +27,37 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
   use FormValidator::Lite;
   FormValidator::Lite->load_constraints(qw/Moose/);
 
+  my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
+  $validator->check(
+     flg => ['Bool']
+ );
+
+  #if you wanna use your original constraints.
+  use FormValidator::Lite;
+  use Any::Moose '::Util::TypeConstraints';
+
+  enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Moose/)'
+
+  FormValidator::Lite->load_constraints(qw/Moose/);
+
+  my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
+  $validator->check(
+     "req_type => ['HttpMethod']
+ );
+
+
 =head1 DESCRIPTION
 
-This module is custom constraint module for FormValidator::Lite.
+This module provides Mo[o|u]se's type constraint as constraint rule of L<FormValidator::Lite>
+If you wanna know the constraint, see L<Moose::Util::TypeConstraints> for details.
 
 =head1 AUTHOR
 
 Hideaki Ohno E<lt>hide.o.j55 {at} gmail.comE<gt>
 
 =head1 SEE ALSO
+
+L<FormValidator::Lite>,L<Moose::Util::TypeConstraints>
 
 =head1 LICENSE
 
