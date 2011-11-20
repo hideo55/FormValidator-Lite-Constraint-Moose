@@ -1,7 +1,19 @@
 package FormValidator::Lite::Constraint::Moose;
 use strict;
 use warnings;
+use FormValidator::Lite::Constraint;
+use Any::Moose ( '::Util::TypeConstraints' => [] );
+
 our $VERSION = '0.01';
+
+*_get_constraint = any_moose('::Util::TypeConstraints')->can('find_type_constraint');
+
+my @types = any_moose('::Util::TypeConstraints')->list_all_type_constraints();
+for my $name (@types) {
+    rule $name => sub {
+        _get_constraint($name)->check($_);
+    };
+}
 
 1;
 __END__
