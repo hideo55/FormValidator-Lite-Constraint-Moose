@@ -4,7 +4,7 @@ use warnings;
 use FormValidator::Lite::Constraint;
 use Any::Moose ( '::Util::TypeConstraints' => [] );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 *_get_constraint = any_moose('::Util::TypeConstraints')->can('find_type_constraint');
 

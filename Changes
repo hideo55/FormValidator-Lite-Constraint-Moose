@@ -1,4 +1,7 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
+0.02    Mon Nov 28 23:17:00 2011
+        - Fixed broken tests
+
 0.01    Sun Nov 20 13:10:22 2011
         - original version
