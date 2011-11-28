@@ -3,7 +3,7 @@ use Test::Fatal;
 use Any::Moose '::Util::TypeConstraints';
 use FormValidator::Lite;
 
-subtype 'Int-or-Str' => as 'Int|Str';
+subtype 'Int.or.Str' => as 'Int|Str';
 
 FormValidator::Lite->load_constraints(qw/Moose/);
 
@@ -35,12 +35,12 @@ my $req = T::Mock::Request->new;
 subtest 'union type can use for constraint' => sub {
     $req->set_param( 'foo' => 1 );
     my $validator = FormValidator::Lite->new($req);
-    $validator->check( foo => ['Int-or-Str'] );
-    ok( !$validator->has_error, 'It is Int' );
+    $validator->check( foo => ['Int.or.Str'] );
+    ok( !$validator->has_error, 'Int.or.Str' );
 
     $req->set_param( 'foo' => 'bar' );
-    $validator->check( foo => ['Int-or-Str'] );
-    ok( !$validator->has_error, 'It is Str' );
+    $validator->check( foo => ['Int.or.Str'] );
+    ok( !$validator->has_error, 'Int.or.Str' );
 };
 
 subtest 'can not use type constraint that defined after call load_constraints().' => sub {
