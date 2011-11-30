@@ -1,5 +1,8 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
+0.03    Wed Nov 30 23:32:00 2011
+        - Specify version of Test::More in Makefile.PL
+
 0.02    Mon Nov 28 23:17:00 2011
         - Fixed broken tests
 
