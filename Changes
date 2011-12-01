@@ -1,5 +1,9 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
+0.04    Fri Dec  2 00:58:00 2011
+        - Specify version of Any::Moose
+        - Add 'Mouse' as recommends
+
 0.03    Wed Nov 30 23:32:00 2011
         - Specify version of Test::More in Makefile.PL
 
