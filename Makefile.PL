@@ -3,7 +3,7 @@ name 'FormValidator-Lite-Constraint-Moose';
 all_from 'lib/FormValidator/Lite/Constraint/Moose.pm';
 
 requires 'FormValidator::Lite';
-requires 'Any::Moose';
+requires 'Any::Moose' => '0.18';
 
 tests 't/*.t';
 author_tests 'xt';
