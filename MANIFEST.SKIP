@@ -21,4 +21,4 @@
 \.sw[po]$
 \.gitignore
 \.project
-
+\.travis\.yml$
