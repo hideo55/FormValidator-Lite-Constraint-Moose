@@ -1,5 +1,8 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
+0.05    Wed Mar  7 22:35:00 2012
+        - Add type coercion support
+
 0.04    Fri Dec  2 00:58:00 2011
         - Specify version of Any::Moose
         - Add 'Mouse' as recommends
