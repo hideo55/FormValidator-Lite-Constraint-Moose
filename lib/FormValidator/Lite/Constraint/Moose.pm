@@ -12,7 +12,15 @@ my @types = any_moose('::Util::TypeConstraints')->list_all_type_constraints();
 for my $name (@types) {
     my $constraint = _get_constraint($name);
     rule $name => sub {
-        $constraint->check($_);
+        my $value = $_;
+
+        $constraint->check($value) or do {
+            return unless $constraint->has_coercion;
+
+            $value = $constraint->coerce($value);
+
+            return $constraint->check($value);
+        }
     };
 }
 
