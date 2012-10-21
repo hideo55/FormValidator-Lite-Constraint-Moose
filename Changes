@@ -1,4 +1,6 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
+0.06    Sun Oct 21 19:30:00 2012
+        - Switch to Module::Build
 
 0.05    Wed Mar  7 22:35:00 2012
         - Add type coercion support
