@@ -24,3 +24,10 @@
 \.gitignore
 \.project
 \.travis\.yml$
+MYMETA\.
+^cover_db
+^.includepath
+^\_build
+^Build$
+^ArangoDB-
+^MANIFEST\.

@@ -1,27 +1,40 @@
-This is Perl module FormValidator::Lite::Constraint::Moose.
+NAME
+    FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
 
-INSTALLATION
+SYNOPSIS
+      use FormValidator::Lite;
+      FormValidator::Lite->load_constraints(qw/Moose/);
 
-FormValidator::Lite::Constraint::Moose installation is straightforward. If your CPAN shell is set up,
-you should just be able to do
+      my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
+      $validator->check(
+         flg => ['Bool']
+     );
 
-    % cpan FormValidator::Lite::Constraint::Moose
+      #if you wanna use your original constraints.
+      use FormValidator::Lite;
+      use Any::Moose '::Util::TypeConstraints';
 
-Download it, unpack it, then build it as per the usual:
+      enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Moose/)'
 
-    % perl Makefile.PL
-    % make && make test
+      FormValidator::Lite->load_constraints(qw/Moose/);
 
-Then install it:
+      my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
+      $validator->check(
+         "req_type => ['HttpMethod']
+     );
 
-    % make install
+DESCRIPTION
+    This module provides Mo[o|u]se's type constraint as constraint rule of
+    FormValidator::Lite If you wanna know the constraint, see
+    Moose::Util::TypeConstraints for details.
 
-DOCUMENTATION
+AUTHOR
+    Hideaki Ohno <hide.o.j55 {at} gmail.com>
 
-FormValidator::Lite::Constraint::Moose documentation is available as in POD. So you can do:
+SEE ALSO
+    FormValidator::Lite,Moose::Util::TypeConstraints
 
-    % perldoc FormValidator::Lite::Constraint::Moose
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-to read the documentation online with your favorite pager.
-
-Hideaki Ohno
