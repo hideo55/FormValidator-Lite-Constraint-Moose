@@ -29,5 +29,5 @@ MYMETA\.
 ^.includepath
 ^\_build
 ^Build$
-^ArangoDB-
+^FormValidator-Lite-Constraint-Moose-
 ^MANIFEST\.
