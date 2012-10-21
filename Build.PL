@@ -25,7 +25,7 @@ Module::Build->new(
     create_readme  => 1,
     add_to_cleanup => ['FormValidator-Lite-Constraint-Moose-*'],
     meta_merge     => {
-        keywords  => [qw/locale/],
+        keywords  => [qw/Moose FormValidator::Lite/],
         resources => {
             repository => 'git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose.git',
             bugtracker => 'https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose/issues',
