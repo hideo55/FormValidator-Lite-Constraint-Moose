@@ -15,14 +15,14 @@ for my $name (@types) {
     my $constraint = $get_constraint->($name);
     rule $name => sub {
         my $value = $_;
-
+        
         $constraint->check($value) or do {
             return unless $constraint->has_coercion;
-
+            
             $value = $constraint->coerce($value);
-
+            
             return $constraint->check($value);
-        }
+        };
     };
 }
 

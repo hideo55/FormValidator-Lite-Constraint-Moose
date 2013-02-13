@@ -17,7 +17,8 @@ Module::Build->new(
     requires           => {
         'perl'                         => '5.008003',
         'FormValidator::Lite'          => '0.10',
-        'Moose::Util::TypeConstraints' => '0.94',
+        'Moose'                        => '0.94',
+        'Moose::Util::TypeConstraints' => 0,
     },
     no_index => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
     test_files => ( -d '.git' || $ENV{RELEASE_TESTING} ) ? [qw(t/ xt/)] : ['t/'],
