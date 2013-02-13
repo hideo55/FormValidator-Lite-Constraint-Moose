@@ -45,7 +45,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
 
   #if you wanna use your original constraints.
   use FormValidator::Lite;
-  use Any::Moose '::Util::TypeConstraints';
+  use Moose::Util::TypeConstraints;
 
   enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Moose/)'
 
@@ -54,7 +54,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
   my $validator = FormValidator::Lite->new(CGI->new("req_type=GET"));
   $validator->check(
      "req_type => ['HttpMethod']
- );
+  );
 
 
 =head1 DESCRIPTION
