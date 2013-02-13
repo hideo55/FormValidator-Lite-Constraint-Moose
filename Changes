@@ -1,6 +1,10 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
+
+0.10    Thu Feb 14 02:45:00 2013
+        - [Incompatible change] Drop support for Any::Mooose.
+
 0.07    Mon Oct 22 01:00:00 2012
-        - Change require perl version
+        - Change require perl ve`rsion
 
 0.06    Sun Oct 21 19:30:00 2012
         - Switch to Module::Build
