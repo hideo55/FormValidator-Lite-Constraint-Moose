@@ -16,15 +16,15 @@ Module::Build->new(
     configure_requires => { 'Module::Build' => '0.38' },
     requires           => {
         'perl'                => '5.008003',
-        'FormValidator::Lite' => 0,
-        'Any::Moose'          => '0.18',
+        'FormValidator::Lite' => '0.10',
+        'Moose'               => '0.94',
     },
-    recommends => { 'Mouse'     => '0.92' },
-    no_index   => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
+    no_index => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
     test_files => ( -d '.git' || $ENV{RELEASE_TESTING} ) ? [qw(t/ xt/)] : ['t/'],
-    create_readme  => 1,
-    add_to_cleanup => ['FormValidator-Lite-Constraint-Moose-*'],
-    meta_merge     => {
+    create_makefile_pl => 'small',
+    create_readme      => 1,
+    add_to_cleanup     => ['FormValidator-Lite-Constraint-Moose-*'],
+    meta_merge         => {
         keywords  => [qw/Moose FormValidator::Lite/],
         resources => {
             repository => 'git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose.git',

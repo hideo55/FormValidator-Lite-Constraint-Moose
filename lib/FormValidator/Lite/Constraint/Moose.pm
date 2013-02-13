@@ -4,15 +4,15 @@ use warnings;
 use utf8;
 use 5.008003;
 use FormValidator::Lite::Constraint;
-use Any::Moose ( '::Util::TypeConstraints' => [] );
+use Moose::Util::TypeConstraints ();
 
 our $VERSION = '0.07';
 
-*_get_constraint = any_moose('::Util::TypeConstraints')->can('find_type_constraint');
+my $get_constraint = Moose::Util::TypeConstraints->can('find_type_constraint');
 
-my @types = any_moose('::Util::TypeConstraints')->list_all_type_constraints();
+my @types = Moose::Util::TypeConstraints->list_all_type_constraints();
 for my $name (@types) {
-    my $constraint = _get_constraint($name);
+    my $constraint = $get_constraint->($name);
     rule $name => sub {
         my $value = $_;
 
@@ -41,7 +41,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
   my $validator = FormValidator::Lite->new(CGI->new("flg=1"));
   $validator->check(
      flg => ['Bool']
- );
+  );
 
   #if you wanna use your original constraints.
   use FormValidator::Lite;
@@ -59,7 +59,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
 
 =head1 DESCRIPTION
 
-This module provides Mo[o|u]se's type constraint as constraint rule of L<FormValidator::Lite>
+This module provides Moose's type constraint as constraint rule of L<FormValidator::Lite>
 If you wanna know the constraint, see L<Moose::Util::TypeConstraints> for details.
 
 =head1 AUTHOR

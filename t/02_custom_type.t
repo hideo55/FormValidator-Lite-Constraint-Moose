@@ -1,6 +1,6 @@
 use Test::More;
 use Test::Fatal;
-use Any::Moose '::Util::TypeConstraints';
+use Moose::Util::TypeConstraints;
 use FormValidator::Lite;
 
 subtype 'Int.or.Str' => as 'Int|Str';
