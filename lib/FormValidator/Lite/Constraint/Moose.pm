@@ -60,7 +60,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
 =head1 DESCRIPTION
 
 This module provides Moose's type constraint as constraint rule of L<FormValidator::Lite>
-If you wanna know the constraint, see L<Moose::Util::TypeConstraints> for details.
+If you want to know the constraint, see L<Moose::Util::TypeConstraints> for details.
 
 =head1 AUTHOR
 

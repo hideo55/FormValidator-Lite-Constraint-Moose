@@ -1,5 +1,7 @@
 Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
+{{$NEXT}}
+
 0.11    Sun Apr 28 03:40:00 2013
         - Change repository information
 
