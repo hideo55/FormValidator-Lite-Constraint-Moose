@@ -6,7 +6,7 @@ use 5.008003;
 use FormValidator::Lite::Constraint;
 use Moose::Util::TypeConstraints ();
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 my $get_constraint = Moose::Util::TypeConstraints->can('find_type_constraint');
 

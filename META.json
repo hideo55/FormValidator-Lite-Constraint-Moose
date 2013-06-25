@@ -58,16 +58,16 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose/issues"
+         "web" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Moose/issues"
       },
-      "homepage" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose",
+      "homepage" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Moose",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose.git",
-         "web" : "https://github.com/hideo55/p5-FormValidator-Lite-Constraint-Moose"
+         "url" : "git://github.com/hideo55/FormValidator-Lite-Constraint-Moose.git",
+         "web" : "https://github.com/hideo55/FormValidator-Lite-Constraint-Moose"
       }
    },
-   "version" : "0.11",
+   "version" : "0.12",
    "x_contributors" : [
       "hirobanex <hirobanex@gmail.com>",
       "hideo55 <hide.o.j55@gmail.com>"
