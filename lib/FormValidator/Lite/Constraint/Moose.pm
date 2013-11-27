@@ -47,7 +47,7 @@ FormValidator::Lite::Constraint::Moose - Use Moose's type constraints.
   use FormValidator::Lite;
   use Moose::Util::TypeConstraints;
 
-  enum 'HttpMethod' => qw(GET HEAD POST PUT DELETE); #you must load before load 'FormValidator::Lite->load_constraints(qw/Moose/)'
+  enum 'HttpMethod' => [qw(GET HEAD POST PUT DELETE)]; #you must load before load 'FormValidator::Lite->load_constraints(qw/Moose/)'
 
   FormValidator::Lite->load_constraints(qw/Moose/);
 
