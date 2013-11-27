@@ -2,6 +2,9 @@ Revision history for Perl extension FormValidator::Lite::Constraint::Moose
 
 {{$NEXT}}
 
+0.13 2013-11-27T00:17:58Z
+    - Document update for compliance with spec of Moose-2.1200.
+
 0.12 2013-06-25T18:05:16Z
     - Switch to Minilla
 
